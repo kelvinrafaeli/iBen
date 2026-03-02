@@ -9,6 +9,6 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 # Copy site files
 COPY docs/ /usr/share/nginx/html/
 
-EXPOSE 80
+EXPOSE 8090
 
 CMD ["nginx", "-g", "daemon off;"]
