@@ -412,6 +412,52 @@
         </table>
       </div>
 
+      <h3>Tipos de Pontos no Mapa</h3>
+      <p>Cada ponto adicionado ao mapa possui um tipo que define seu comportamento. Abaixo a lista completa:</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Ponto (Nome na Interface)</th><th>Descrição</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Ponto de Coleta</strong> <code>Jack-up Point</code></td><td>Local onde o robô <strong>eleva (jack-up)</strong> a estante para transportá-la. É o ponto de origem da tarefa de transporte.</td></tr>
+            <tr><td><strong>Ponto de Entrega</strong> <code>Jack-down Point</code></td><td>Local onde o robô <strong>abaixa (jack-down)</strong> a estante após o transporte. É o ponto de destino.</td></tr>
+            <tr><td><strong>Ponto de Espera</strong> <code>Standby Point / Waiting Point</code></td><td>Local onde o robô aguarda parado quando não há tarefas. Ele permanece ali até receber uma nova ordem.</td></tr>
+            <tr><td><strong>Ponto de Carga</strong> <code>Charging Point</code></td><td>Posição da estação de carregamento. O robô retorna automaticamente quando a bateria atinge o nível mínimo configurado.</td></tr>
+            <tr><td><strong>Ponto de Carga Inteligente</strong> <code>Smart Charging Point</code></td><td>Igual ao ponto de carga, mas com agendamento automático — o robô decide o melhor momento para carregar sem interromper tarefas.</td></tr>
+            <tr><td><strong>Ponto de Patrulha</strong> <code>Cruise Point</code></td><td>Pontos de passagem da rota de patrulha (Cruise Task). O robô para por um tempo configurável em cada ponto.</td></tr>
+            <tr><td><strong>Ponto de Tarefa</strong> <code>Task Point</code></td><td>Ponto genérico de tarefa — pode ser usado em tarefas Flatbed, Custom Task e Quick Task como origem ou destino.</td></tr>
+            <tr><td><strong>Ponto de Elevador</strong> <code>Elevator Point</code></td><td>Ponto dentro/fora do elevador para operação entre andares. Utilizado junto com a integração IoT de elevador.</td></tr>
+            <tr><td><strong>Ponto de Porta</strong> <code>Door Control Point</code></td><td>Ponto associado a uma porta automática. Ao chegar, o robô envia sinal para abrir a porta e aguarda antes de prosseguir.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout--info">
+        <div class="callout__icon">💡</div>
+        <div>
+          <strong>Dica</strong>
+          <p>Ao adicionar um ponto, configure o <strong>ângulo de orientação</strong> — ele define a direção que o robô estará voltado ao chegar no ponto. Isso é importante para alinhamento com estantes e estações de carga.</p>
+        </div>
+      </div>
+
+      <h3>Tipos de Áreas no Mapa</h3>
+      <p>Além dos pontos, você pode desenhar áreas com comportamentos especiais:</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Área (Nome na Interface)</th><th>Descrição</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Zona Proibida</strong> <code>Prohibited Area</code></td><td>Área onde o robô <strong>não pode entrar</strong> em nenhuma circunstância.</td></tr>
+            <tr><td><strong>Zona de Desaceleração</strong> <code>Deceleration Area</code></td><td>Área onde o robô reduz a velocidade automaticamente — ideal para corredores estreitos ou áreas com pessoas.</td></tr>
+            <tr><td><strong>Zona de Porta</strong> <code>Door Control Area</code></td><td>Área vinculada a uma porta automática. O robô envia comando de abertura ao entrar na zona.</td></tr>
+            <tr><td><strong>Zona de Elevador</strong> <code>Elevator Area</code></td><td>Área dentro ou ao redor do elevador para integração multi-andar.</td></tr>
+            <tr><td><strong>Zona Exclusiva</strong> <code>Exclusive Area</code></td><td>Apenas um robô por vez pode ocupar esta zona — evita colisões em áreas estreitas quando há múltiplos robôs.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
       <h3>Processo de Mapeamento (Criar Novo Mapa)</h3>
       <ol class="steps">
         <li><div><strong>Selecione o andar</strong> a ser mapeado e clique em "Iniciar Novo Mapa".</div></li>
