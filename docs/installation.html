@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instalação & Setup — iBEN Docs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="header__logo">
+      <div class="header__logo-icon">iB</div>
+      iBEN Docs
+    </a>
+    <nav class="header__nav">
+      <a href="index.html">Início</a>
+      <a href="robot-x300b.html">Robô X300B</a>
+      <a href="ims-platform.html">Plataforma iMS</a>
+      <a href="installation.html" class="active">Instalação</a>
+      <a href="maintenance.html">Manutenção</a>
+    </nav>
+    <div class="header__search">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+      <input type="text" placeholder="Buscar na documentação...">
+    </div>
+  </header>
+
+  <div class="search-results"><div class="search-results__panel"></div></div>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <div class="sidebar__section">
+        <div class="sidebar__title">Instalação</div>
+        <a href="installation.html" class="sidebar__link active">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Visão Geral
+        </a>
+        <ul class="sidebar__sublinks">
+          <li><a href="#overview">Checklist de Instalação</a></li>
+          <li><a href="#prerequisites">Pré-requisitos</a></li>
+          <li><a href="#network">Configuração de Rede</a></li>
+          <li><a href="#first-boot">Primeiro Boot</a></li>
+          <li><a href="#mapping">Mapeamento Inicial</a></li>
+          <li><a href="#charging">Estação de Carregamento</a></li>
+          <li><a href="#waypoints">Configurar Waypoints</a></li>
+          <li><a href="#iot">Dispositivos IoT</a></li>
+          <li><a href="#ims-setup">Configurar iMS</a></li>
+          <li><a href="#apk-update">Atualizar Tela APK</a></li>
+          <li><a href="#validation">Validação Final</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar__section">
+        <div class="sidebar__title">Navegação</div>
+        <a href="index.html" class="sidebar__link">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0h4"/></svg>
+          Voltar ao Início
+        </a>
+      </div>
+    </aside>
+
+    <main class="main">
+
+      <div class="breadcrumb">
+        <a href="index.html">Início</a>
+        <span>›</span>
+        <strong>Instalação & Setup</strong>
+      </div>
+
+      <h1>Instalação & Setup</h1>
+      <p>Guia completo para a instalação inicial do robô iBEN X300B — desde a preparação do ambiente até a validação final.</p>
+
+      <!-- ══ OVERVIEW ══ -->
+      <h2 id="overview">Checklist de Instalação</h2>
+      <p>Siga esta ordem para garantir uma instalação bem-sucedida:</p>
+
+      <ol class="steps">
+        <li><div><strong>Verificar Pré-requisitos</strong> — Ambiente, rede, estantes e área de operação.</div></li>
+        <li><div><strong>Configurar Rede</strong> — Wi-Fi com acesso à internet para conexão com a plataforma iMS.</div></li>
+        <li><div><strong>Primeiro Boot</strong> — Ligar o robô, conectar ao Wi-Fi e fazer login na plataforma.</div></li>
+        <li><div><strong>Mapeamento Inicial</strong> — Criar o mapa percorrendo todas as rotas de operação.</div></li>
+        <li><div><strong>Instalar Estação de Carregamento</strong> — Posicionar e configurar o carregador.</div></li>
+        <li><div><strong>Configurar Waypoints</strong> — Definir pontos de coleta, entrega e espera.</div></li>
+        <li><div><strong>Configurar Dispositivos IoT</strong> — Pagers, portas automáticas, elevadores.</div></li>
+        <li><div><strong>Configurar iMS</strong> — Ativar robô, publicar mapa e configurar tarefas.</div></li>
+        <li><div><strong>Validação Final</strong> — Testar tarefas, carregamento e comunicação.</div></li>
+      </ol>
+
+      <!-- ══ PREREQUISITES ══ -->
+      <h2 id="prerequisites">Pré-Requisitos</h2>
+
+      <h3>Requisitos do Ambiente Físico</h3>
+      <ul class="checklist">
+        <li><strong>Piso plano</strong> — sem buracos, degraus altos, grandes inclinações ou gaps significativos</li>
+        <li><strong>Corredores livres</strong> — sem obstruções permanentes nas rotas planejadas</li>
+        <li><strong>Iluminação adequada</strong> — para o funcionamento correto da câmera de profundidade</li>
+        <li><strong>Temperatura ambiente segura</strong> — não expor a ambientes de alta temperatura</li>
+        <li><strong>Sem umidade excessiva</strong> — ambiente seco e controlado</li>
+      </ul>
+
+      <h3>Requisitos de Estantes</h3>
+      <div class="callout callout--info">
+        <div class="callout__icon">📏</div>
+        <div>
+          <p>Consulte as especificações completas em <a href="robot-x300b.html#shelf-specs"><strong>Robô X300B → Especificações de Estante</strong></a>.</p>
+          <p>Resumo: Tamanho padrão <strong>700×700 mm</strong>, altura da base <strong>300 mm</strong>, espaço frontal ≥ <strong>1.000 mm</strong>.</p>
+        </div>
+      </div>
+
+      <h3>Requisitos de Espaço</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Local</th><th>Dimensão Mínima</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Frente da estante (acesso do robô)</td><td>≥ 1.000 mm</td></tr>
+            <tr><td>Laterais da estante</td><td>≥ 150 mm cada lado</td></tr>
+            <tr><td>Parte traseira da estante</td><td>≥ 200 mm</td></tr>
+            <tr><td>Entre múltiplas estantes</td><td>≥ 150 mm</td></tr>
+            <tr><td>Largura do corredor para passagem</td><td>≥ 900 mm (recomendado)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ══ NETWORK ══ -->
+      <h2 id="network">Configuração de Rede</h2>
+
+      <p>O robô precisa de <strong>conexão Wi-Fi com acesso à internet</strong> para comunicação com a plataforma iMS.</p>
+
+      <h3>Opções de Conectividade</h3>
+      <div class="cards">
+        <div class="card">
+          <div class="card__icon card__icon--blue">📶</div>
+          <div class="card__title">Wi-Fi da Fábrica</div>
+          <div class="card__desc">Conectar à rede Wi-Fi existente com acesso à internet. Solução mais comum.</div>
+        </div>
+        <div class="card">
+          <div class="card__icon card__icon--green">📡</div>
+          <div class="card__title">Roteador Wi-Fi Dedicado</div>
+          <div class="card__desc">Roteador Wi-Fi próprio para o robô e pagers — ideal para controle isolado.</div>
+        </div>
+        <div class="card">
+          <div class="card__icon card__icon--orange">📱</div>
+          <div class="card__title">Roteador 4G</div>
+          <div class="card__desc">Para fábricas sem Wi-Fi. Usa rede móvel 4G para conectar robô e pagers.</div>
+        </div>
+      </div>
+
+      <div class="callout callout--warning">
+        <div class="callout__icon">⚠️</div>
+        <div>
+          <strong>Importante sobre a rede</strong>
+          <p>A rede deve ter acesso à <strong>internet</strong> para comunicar com o iMS cloud. Redes locais isoladas não funcionam para o gerenciamento remoto.</p>
+        </div>
+      </div>
+
+      <h3>Conectar o Robô ao Wi-Fi</h3>
+      <ol class="steps">
+        <li><div><strong>Acesse Configurações</strong> na tela do robô (senha: <code>6666</code>).</div></li>
+        <li><div><strong>Vá em Configurações do Sistema → Rede</strong>.</div></li>
+        <li><div><strong>Selecione a rede Wi-Fi</strong> e insira a senha.</div></li>
+        <li><div><strong>Confirme a conexão</strong> — verifique o ícone de Wi-Fi na tela.</div></li>
+      </ol>
+
+      <!-- ══ FIRST BOOT ══ -->
+      <h2 id="first-boot">Primeiro Boot</h2>
+
+      <ol class="steps">
+        <li><div><strong>Posicione o robô</strong> na área de operação, em terreno plano.</div></li>
+        <li><div><strong>Ligue o disjuntor (Air Switch)</strong> e pressione o botão de energia. Aguarde o LED azul.</div></li>
+        <li><div><strong>Conecte ao Wi-Fi</strong> conforme descrito acima.</div></li>
+        <li><div><strong>Selecione o idioma</strong> em Configurações → Idioma (Português disponível).</div></li>
+        <li><div><strong>Verifique informações do robô</strong> em Configurações → Informações do Robô.</div></li>
+      </ol>
+
+      <!-- ══ MAPPING ══ -->
+      <h2 id="mapping">Mapeamento Inicial</h2>
+      <p>O mapa é essencial — sem ele, o robô não pode navegar.</p>
+
+      <ol class="steps">
+        <li><div><strong>Acesse Configurações → Gerenciamento de Mapas → Adicionar Novo Mapa</strong>.</div></li>
+        <li><div><strong>Selecione o andar</strong> a ser mapeado (ex: 1F).</div></li>
+        <li><div><strong>Clique em "Iniciar Novo Mapa"</strong>.</div></li>
+        <li><div><strong>Empurre o robô manualmente e lentamente</strong> por TODAS as rotas que ele precisará percorrer. A trajetória aparece em tempo real na tela.</div></li>
+        <li><div><strong>Marque pontos importantes</strong> durante o mapeamento usando "Adicionar Ponto Atual".</div></li>
+        <li><div><strong>Clique em "Concluir Mapeamento"</strong> quando todas as rotas estiverem cobertas.</div></li>
+      </ol>
+
+      <div class="callout callout--info">
+        <div class="callout__icon">💡</div>
+        <div>
+          <strong>Dicas para um bom mapa</strong>
+          <ul style="margin:0; padding-left:1.2rem;">
+            <li>Percorra <strong>todas as rotas</strong> — o robô só pode navegar por áreas mapeadas.</li>
+            <li>Empurre <strong>lentamente e de forma constante</strong> para coleta de dados precisa.</li>
+            <li>Certifique-se de que os corredores e cruzamentos estejam cobertos.</li>
+            <li>Após concluir, revise o mapa na tela para garantir que está completo.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Editar Mapa</h3>
+      <p>Após o mapeamento, use as ferramentas de edição para:</p>
+      <ul>
+        <li><strong>Adicionar pontos de tarefa</strong> — com posição e ângulo de orientação</li>
+        <li><strong>Desenhar linhas de proibição</strong> — áreas por onde o robô não pode passar</li>
+        <li><strong>Criar rede de vias</strong> — definir caminhos preferenciais</li>
+        <li><strong>Definir áreas especiais</strong> — zonas de desaceleração, controle de porta, elevador, exclusivas</li>
+        <li><strong>Usar borracha</strong> — remover obstáculos falsos do mapa</li>
+      </ul>
+
+      <!-- ══ CHARGING ══ -->
+      <h2 id="charging">Estação de Carregamento</h2>
+
+      <ol class="steps">
+        <li><div><strong>Posicione a estação de carga</strong> em local acessível, preferencialmente em corredor ou área lateral.</div></li>
+        <li><div><strong>Conecte a estação à tomada</strong> elétrica.</div></li>
+        <li><div><strong>Configure no robô:</strong> Configurações → Gerais → Posição do Carregador. Use "Relocação de Carga" para registrar a posição.</div></li>
+        <li><div><strong>Selecione o tipo:</strong> Carregador Comum ou Carregador Inteligente (com agendamento automático).</div></li>
+        <li><div><strong>Teste:</strong> Envie o robô para o carregador usando "Retornar ao Carregador" na tela inicial.</div></li>
+      </ol>
+
+      <div class="callout callout--info">
+        <div class="callout__icon">🔋</div>
+        <div>
+          <strong>Configurações de Energia</strong>
+          <p>Em Configurações → Gerais → Energia, configure:</p>
+          <ul style="margin:0; padding-left:1.2rem;">
+            <li><strong>Alerta de bateria baixa</strong> — percentual em que o robô avisa</li>
+            <li><strong>Carregamento automático</strong> — robô retorna ao carregador automaticamente ao atingir o nível definido</li>
+            <li><strong>Energia mínima para tarefa</strong> — quando ativo, a bateria deve estar acima do limiar de carregamento automático para aceitar tarefas</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ══ WAYPOINTS ══ -->
+      <h2 id="waypoints">Configurar Waypoints</h2>
+      <p>Waypoints são os pontos de referência para as tarefas do robô (coleta, entrega, standby, etc.).</p>
+
+      <ol class="steps">
+        <li><div><strong>Acesse o editor de mapa</strong> (Configurações → Mapas → Editar).</div></li>
+        <li><div><strong>Use a ferramenta "Posição do Ponto"</strong> para adicionar pontos no mapa.</div></li>
+        <li><div><strong>Configure o ângulo</strong> de chegada do robô em cada ponto.</div></li>
+        <li><div><strong>Nomeie os pontos</strong> de forma descritiva (ex: "Estação A1", "Expedição 3").</div></li>
+        <li><div><strong>(Opcional) Crie grupos de pontos</strong> em Configurações → Gerais → Grupos de Pontos para organizar.</div></li>
+      </ol>
+
+      <!-- ══ IoT ══ -->
+      <h2 id="iot">Configurar Dispositivos IoT</h2>
+
+      <h3>Pager (Dispositivo de Chamada)</h3>
+      <ol class="steps">
+        <li><div><strong>Conecte o pager à mesma rede Wi-Fi</strong> do robô (com acesso à internet).</div></li>
+        <li><div><strong>No iMS</strong>, vá em Configuração → Equipamentos → Pagers → "Adicionar Pager".</div></li>
+        <li><div><strong>Insira o número do pager</strong> (impresso na embalagem) e dê um nome descritivo.</div></li>
+        <li><div><strong>Configure os botões:</strong> defina o modo de execução (Inteligente ou Designado), tipo de tarefa para cada botão (pressão curta e longa).</div></li>
+        <li><div><strong>Salve</strong> a configuração e teste pressionando os botões do pager.</div></li>
+      </ol>
+
+      <h3>Verificar Conexão do Pager</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>LED</th><th>Estado</th><th>Significado</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>NET</strong></td><td>Verde fixo</td><td>✅ Wi-Fi conectado</td></tr>
+            <tr><td><strong>SERV</strong></td><td>Verde fixo</td><td>✅ Conectado ao servidor iMS</td></tr>
+            <tr><td><strong>NET</strong></td><td>Vermelho piscando</td><td>❌ Wi-Fi não conectado</td></tr>
+            <tr><td><strong>SERV</strong></td><td>Vermelho piscando</td><td>❌ Sem conexão com servidor</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Elevador (Opcional)</h3>
+      <p>Se o robô opera em múltiplos andares:</p>
+      <ol>
+        <li>Instale o <strong>módulo de controle de elevador</strong> iBEN.</li>
+        <li>No robô: Configurações → Gerais → Elevador → <strong>Habilitar</strong>.</li>
+        <li>No mapa, crie <strong>zonas de elevador</strong> usando a ferramenta de Área.</li>
+      </ol>
+
+      <h3>Porta Automática (Opcional)</h3>
+      <p>Para integrar com portas automáticas:</p>
+      <ol>
+        <li>Instale o <strong>módulo de porta automática</strong> iBEN.</li>
+        <li>No mapa, crie <strong>zonas de controle de porta</strong> nos locais das portas.</li>
+      </ol>
+
+      <!-- ══ IMS SETUP ══ -->
+      <h2 id="ims-setup">Configurar a Plataforma iMS</h2>
+
+      <ol class="steps">
+        <li><div><strong>Acesse o iMS</strong> pelo navegador (URL fornecida pelo suporte Ganzer Automação).</div></li>
+        <li><div><strong>Login</strong> com as credenciais de administrador fornecidas.</div></li>
+        <li><div><strong>Ative o robô</strong> — Operação → Robôs → Robôs Não Ativados → "Ativar".</div></li>
+        <li><div><strong>Publique o mapa</strong> — Caso o mapa tenha sido criado no robô e transferido via "Upload para Nuvem", publique-o em Configuração → Mapas.</div></li>
+        <li><div><strong>Distribua o mapa</strong> — Após publicar, distribua para os robôs que precisam dele.</div></li>
+        <li><div><strong>Crie grupos de tarefas</strong> (opcional) — Configuração → Tarefas → Grupos de Tarefas.</div></li>
+        <li><div><strong>Configure pagers</strong> (se aplicável) — Configuração → Equipamentos → Pagers.</div></li>
+        <li><div><strong>Crie usuários e roles</strong> — Permissões → Usuários / Roles.</div></li>
+      </ol>
+
+      <!-- ══ APK UPDATE ══ -->
+      <h2 id="apk-update">Atualização do APK da Tela Interativa</h2>
+      <p>Quando uma nova versão do software da tela interativa estiver disponível, siga o procedimento:</p>
+
+      <h3>Via OTA (Plataforma iMS) — Recomendado</h3>
+      <ol class="steps">
+        <li><div><strong>No iMS</strong>, vá em Operação → Manutenção → Atualização de Firmware.</div></li>
+        <li><div><strong>Crie um plano de atualização</strong> selecionando "Firmware da Tela Interativa".</div></li>
+        <li><div><strong>Faça upload do arquivo .zip</strong> fornecido.</div></li>
+        <li><div><strong>Defina as condições</strong> (Nº do robô ou Nº do mapa).</div></li>
+        <li><div><strong>Inicie o push</strong> — o sistema envia automaticamente ao robô.</div></li>
+      </ol>
+
+      <h3>Via Robô (Local)</h3>
+      <ol class="steps">
+        <li><div><strong>Acesse Configurações → Atualização de Versão</strong> no robô.</div></li>
+        <li><div><strong>Clique em "Verificar Atualizações"</strong>.</div></li>
+        <li><div><strong>Se disponível</strong>, siga as instruções na tela para baixar e instalar.</div></li>
+      </ol>
+
+      <div class="callout callout--warning">
+        <div class="callout__icon">⚠️</div>
+        <div>
+          <strong>Durante a atualização</strong>
+          <p>Não desligue o robô ou desconecte da rede durante a atualização do firmware. Isso pode corromper o software e requerer assistência técnica.</p>
+        </div>
+      </div>
+
+      <!-- ══ VALIDATION ══ -->
+      <h2 id="validation">Validação Final</h2>
+      <p>Antes de entregar o sistema ao cliente, valide cada item:</p>
+
+      <ul class="checklist">
+        <li><strong>Conexão Wi-Fi estável</strong> — robô conectado e comunicando com iMS</li>
+        <li><strong>Mapa completo</strong> — todas as rotas mapeadas e waypoints definidos</li>
+        <li><strong>Estação de carga funcional</strong> — robô vai e carrega corretamente</li>
+        <li><strong>Tarefa Rápida funciona</strong> — jack-up, transporte e jack-down OK</li>
+        <li><strong>Tarefa de Patrulha funciona</strong> — rota e pausas corretas</li>
+        <li><strong>Pagers conectados</strong> — LEDs verdes, tarefas disparam corretamente</li>
+        <li><strong>Botão de emergência testado</strong> — para e retoma corretamente</li>
+        <li><strong>Sensor de colisão testado</strong> — robô para ao detectar obstáculo</li>
+        <li><strong>Navegação correta</strong> — robô desvia de obstáculos e segue as rotas</li>
+        <li><strong>Carregamento automático</strong> — robô retorna ao carregador quando bateria baixa</li>
+        <li><strong>iMS mostra dados</strong> — robô online, tarefas visíveis, saúde monitorada</li>
+        <li><strong>Idioma configurado</strong> — interfaz no idioma correto</li>
+      </ul>
+
+      <div class="callout callout--success">
+        <div class="callout__icon">🎉</div>
+        <div>
+          <strong>Instalação concluída!</strong>
+          <p>Se todos os itens acima foram validados com sucesso, o sistema está pronto para operação. Entregue ao cliente os acessos ao iMS e oriente sobre os procedimentos de manutenção em <a href="maintenance.html"><strong>Manutenção & Cuidados</strong></a>.</p>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <footer class="footer">
+    <span>© 2026 iBEN Robot — Beijing Huiwen Technology Co., Ltd.</span>
+    <span><a href="index.html">← Voltar ao Início</a></span>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

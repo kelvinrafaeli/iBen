@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma iMS — iBEN Docs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="header__logo">
+      <div class="header__logo-icon">iB</div>
+      iBEN Docs
+    </a>
+    <nav class="header__nav">
+      <a href="index.html">Início</a>
+      <a href="robot-x300b.html">Robô X300B</a>
+      <a href="ims-platform.html" class="active">Plataforma iMS</a>
+      <a href="installation.html">Instalação</a>
+      <a href="maintenance.html">Manutenção</a>
+    </nav>
+    <div class="header__search">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+      <input type="text" placeholder="Buscar na documentação...">
+    </div>
+  </header>
+
+  <div class="search-results"><div class="search-results__panel"></div></div>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <div class="sidebar__section">
+        <div class="sidebar__title">Plataforma iMS</div>
+        <a href="ims-platform.html" class="sidebar__link active">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+          Visão Geral
+        </a>
+        <ul class="sidebar__sublinks">
+          <li><a href="#overview">O que é o iMS</a></li>
+          <li><a href="#architecture">Arquitetura</a></li>
+          <li><a href="#homepage">Dashboard</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar__section">
+        <div class="sidebar__title">Configuração</div>
+        <ul class="sidebar__sublinks">
+          <li><a href="#maps">Mapas</a></li>
+          <li><a href="#pagers">Pagers</a></li>
+          <li><a href="#task-groups">Grupos de Tarefas</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar__section">
+        <div class="sidebar__title">Operação</div>
+        <ul class="sidebar__sublinks">
+          <li><a href="#tasks">Monitoramento de Tarefas</a></li>
+          <li><a href="#robots">Gerenciamento de Robôs</a></li>
+          <li><a href="#robot-details">Detalhes do Robô</a></li>
+          <li><a href="#remote">Ferramentas Remotas</a></li>
+          <li><a href="#firmware">Atualização de Firmware</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar__section">
+        <div class="sidebar__title">Administração</div>
+        <ul class="sidebar__sublinks">
+          <li><a href="#permissions">Permissões</a></li>
+          <li><a href="#logs">Logs</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar__section">
+        <div class="sidebar__title">Navegação</div>
+        <a href="index.html" class="sidebar__link">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0h4"/></svg>
+          Voltar ao Início
+        </a>
+      </div>
+    </aside>
+
+    <main class="main">
+
+      <div class="breadcrumb">
+        <a href="index.html">Início</a>
+        <span>›</span>
+        <strong>Plataforma iMS</strong>
+      </div>
+
+      <h1>Plataforma iMS</h1>
+      <p>O <strong>iMS (intelligent Management System)</strong> é a plataforma cloud de gerenciamento de robôs da iBEN — oferecendo monitoramento, agendamento de tarefas, manutenção remota e integração com dispositivos IoT.</p>
+
+      <!-- ══ OVERVIEW ══ -->
+      <h2 id="overview">O que é o iMS</h2>
+      <p>O iMS é uma plataforma completa que integra:</p>
+
+      <div class="cards">
+        <div class="card">
+          <div class="card__icon card__icon--blue">🤖</div>
+          <div class="card__title">Gestão de Robôs</div>
+          <div class="card__desc">Registro, ativação, informações básicas, monitoramento de saúde e dados operacionais.</div>
+        </div>
+        <div class="card">
+          <div class="card__icon card__icon--green">🗺️</div>
+          <div class="card__title">Gestão de Mapas</div>
+          <div class="card__desc">Vinculação de mapas, manutenção e associação para operação multi-robô.</div>
+        </div>
+        <div class="card">
+          <div class="card__icon card__icon--purple">📋</div>
+          <div class="card__title">Agendamento de Tarefas</div>
+          <div class="card__desc">Alocação, agendamento e controle de tráfego para operações multi-robô.</div>
+        </div>
+        <div class="card">
+          <div class="card__icon card__icon--orange">📟</div>
+          <div class="card__title">Dispositivos IoT</div>
+          <div class="card__desc">Gerenciamento de pagers, portas e elevadores. Integração WCS industrial.</div>
+        </div>
+        <div class="card">
+          <div class="card__icon card__icon--red">🛠️</div>
+          <div class="card__title">Manutenção Remota</div>
+          <div class="card__desc">Logs remotos, bag management, OTA, diagnóstico remoto e SSH.</div>
+        </div>
+        <div class="card">
+          <div class="card__icon card__icon--teal">🔗</div>
+          <div class="card__title">API Aberta</div>
+          <div class="card__desc">Integração com MES, ERP e outros sistemas via API para automação completa.</div>
+        </div>
+      </div>
+
+      <!-- ══ ARCHITECTURE ══ -->
+      <h2 id="architecture">Arquitetura do Sistema</h2>
+      <p>O iMS opera como solução Cloud-Robot-Terminal-Human:</p>
+      <ul>
+        <li><strong>Cloud:</strong> Gerenciamento de dispositivos, agendamento de tarefas e manutenção remota.</li>
+        <li><strong>Robot:</strong> Robôs inteligentes e flexíveis com navegação autônoma.</li>
+        <li><strong>Terminal:</strong> Terminais IoT industriais para controle multi-terminal.</li>
+        <li><strong>Human:</strong> Interface de colaboração humano-robô.</li>
+      </ul>
+
+      <h3>Informações do Usuário</h3>
+      <p>As contas são atribuídas pelo administrador da empresa. Existem <strong>2 roles especiais</strong> pré-configurados:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Role</th><th>Descrição</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Super Administrador</strong></td><td>iBEN Robot — controle total do sistema, incluindo ativação de robôs.</td></tr>
+            <tr><td><strong>Administrador da Empresa</strong></td><td>Maior permissão dentro da empresa. Cria sub-contas e sub-roles.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Idiomas suportados: <strong>Chinês</strong> e <strong>Inglês</strong>. A troca pode ser feita na página de login ou no canto superior direito.</p>
+
+      <!-- ══ HOMEPAGE ══ -->
+      <h2 id="homepage">Dashboard (Homepage)</h2>
+      <p>A página inicial exibe dados visuais estatísticos de todo o sistema:</p>
+      <ul>
+        <li>Status de execução de tarefas</li>
+        <li>Proporção de modelos de robôs</li>
+        <li>Status dos robôs (online, offline, idle)</li>
+        <li>Outros dados operacionais</li>
+      </ul>
+
+      <!-- ══ MAPS ══ -->
+      <h2 id="maps">Gerenciamento de Mapas</h2>
+
+      <h3>Status de Mapas</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Status</th><th>Descrição</th><th>Operações Permitidas</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge badge--orange">Não Publicado</span></td>
+              <td>Rascunho novo / importado ou versão editada.</td>
+              <td>Editar, Publicar, Excluir, Especificar robô.</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge--green">Publicado</span></td>
+              <td>Versão oficial vigente — pode ser distribuída a todos os robôs.</td>
+              <td>Distribuir, Copiar como Novo, Excluir (somente se não houver robôs vinculados).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Operações de Mapa</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Ação</th><th>Descrição</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Importar Mapa</strong></td><td>Via botão "Import" na plataforma ou "Upload" no lado do robô.</td></tr>
+            <tr><td><strong>Publicar</strong></td><td>Clique "Publicar" em mapa não publicado. A versão anterior é sobrescrita.</td></tr>
+            <tr><td><strong>Copiar</strong></td><td>Gera cópia não publicada com novo número. Formato: Nome + cópia + data.</td></tr>
+            <tr><td><strong>Excluir</strong></td><td>Não publicado: exclui direto (sem robôs vinculados). Publicado: desvincular robôs primeiro.</td></tr>
+            <tr><td><strong>Distribuir (Issue)</strong></td><td>Enviar mapa publicado para robôs específicos.</td></tr>
+            <tr><td><strong>Editar</strong></td><td>Editar waypoints, linhas de proibição, áreas, borracha, direção de pontos.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ══ PAGERS ══ -->
+      <h2 id="pagers">Pagers — Dispositivo de Chamada</h2>
+      <p>Pagers são dispositivos IoT industriais que permitem chamar robôs com o toque de um botão.</p>
+
+      <h3>Indicadores LED do Pager</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>LED</th><th>Cor</th><th>Significado</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>NET</strong></td><td>Vermelho piscando</td><td>Conectando Wi-Fi</td></tr>
+            <tr><td><strong>NET</strong></td><td>Verde fixo</td><td>Wi-Fi conectado</td></tr>
+            <tr><td><strong>SERV</strong></td><td>Vermelho piscando</td><td>Conectando ao servidor</td></tr>
+            <tr><td><strong>SERV</strong></td><td>Verde fixo</td><td>Conectado ao servidor</td></tr>
+            <tr><td><strong>R/T</strong></td><td>Vermelho</td><td>Pacote enviado</td></tr>
+            <tr><td><strong>R/T</strong></td><td>Verde</td><td>Pacote recebido</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Luz de Status do Pager</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Estado</th><th>Luz</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Sem tarefa ativa</td><td>Apagada</td></tr>
+            <tr><td>Chamada enviada (tarefa criada)</td><td>Verde piscando lento</td></tr>
+            <tr><td>Chamada bem-sucedida (em execução)</td><td>Verde fixo</td></tr>
+            <tr><td>Chamada falhou (sem resposta)</td><td>Amarelo — piscada única</td></tr>
+            <tr><td>Robô falhou na tarefa</td><td>Amarelo — piscada dupla</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Botões do Pager</h3>
+      <p>O pager possui <strong>2 botões</strong> (1 verde, 1 vermelho), cada um com 2 modos de ativação:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Botão</th><th>Ação</th><th>Função Padrão</th></tr>
+          </thead>
+          <tbody>
+            <tr><td rowspan="2"><strong>🟢 Verde</strong></td><td>Pressão única</td><td>Executar tarefa point-to-point (configurável)</td></tr>
+            <tr><td>Pressão longa (3s)</td><td>Tarefa customizada (configurável)</td></tr>
+            <tr><td rowspan="2"><strong>🔴 Vermelho</strong></td><td>Pressão única</td><td>Tarefa customizada (configurável)</td></tr>
+            <tr><td>Pressão longa (3s)</td><td>Cancelar tarefa atual (configurável)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout--info">
+        <div class="callout__icon">💡</div>
+        <div>
+          <strong>Modo exclusivo do Pager</strong>
+          <p>Quando uma tarefa está em execução (luz verde fixa), o pager não aceita novas tarefas. Somente após a tarefa ser concluída (luz apagada) é possível iniciar outra.</p>
+        </div>
+      </div>
+
+      <h3>Configuração do Pager</h3>
+      <ol class="steps">
+        <li><div><strong>Adicionar Pager:</strong> Insira o número do pager (disponível na embalagem) e o nome.</div></li>
+        <li><div><strong>Modo de Execução:</strong> "Agendamento Inteligente" (automático) ou "Robô Designado" (fixo).</div></li>
+        <li><div><strong>Configurar Botões:</strong> Para cada botão, defina o tipo de tarefa (Point-to-Point, Custom Task, Cancel Task) e selecione o grupo de tarefas.</div></li>
+        <li><div><strong>Salvar</strong> a configuração.</div></li>
+      </ol>
+
+      <h4>Agendamento Inteligente (v1.0.0)</h4>
+      <ol>
+        <li>Prioridade para robôs com status <strong>Idle</strong>.</li>
+        <li>Se todos idle: seleciona o robô com <strong>maior bateria</strong>.</li>
+        <li>Se bateria igual: seleciona o robô <strong>mais próximo</strong>.</li>
+      </ol>
+
+      <!-- ══ TASK GROUPS ══ -->
+      <h2 id="task-groups">Grupos de Tarefas</h2>
+      <p>Grupos de tarefas permitem definir templates de tarefas reutilizáveis.</p>
+
+      <h3>Criar Grupo de Tarefas</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Campo</th><th>Descrição</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Nome</strong></td><td>Obrigatório — máx. 30 caracteres.</td></tr>
+            <tr><td><strong>Mapa</strong></td><td>Obrigatório — selecione o mapa associado.</td></tr>
+            <tr><td><strong>Ação pós-tarefa</strong></td><td>"Permanecer" ou "Retornar ao carregador" (definir qual carregador).</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Para cada <strong>passo</strong> da tarefa, defina:</p>
+      <ul>
+        <li>Destino (waypoint)</li>
+        <li>Tipo de ação (permanecer no local, etc.)</li>
+        <li>Tempo de permanência: "Confirmação manual" ou "Tempo customizado" (em segundos)</li>
+      </ul>
+      <p>Passos podem ser reordenados por drag-and-drop, removidos com "-" ou adicionados com "+ Adicionar Passo".</p>
+
+      <!-- ══ TASKS ══ -->
+      <h2 id="tasks">Monitoramento de Tarefas</h2>
+      <p>O módulo de tarefas monitora e gerencia o ciclo de vida completo de cada tarefa.</p>
+
+      <h3>Status de Tarefas</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Status</th><th>Descrição</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="badge badge--orange">Pendente</span></td><td>Tarefa criada, aguardando agendamento.</td></tr>
+            <tr><td><span class="badge badge--blue">Em Execução</span></td><td>Robô executando a tarefa.</td></tr>
+            <tr><td><span class="badge badge--green">Concluída</span></td><td>Tarefa finalizada com sucesso.</td></tr>
+            <tr><td><span class="badge badge--red">Cancelada</span></td><td>Tarefa cancelada manualmente.</td></tr>
+            <tr><td><span class="badge badge--red">Anormal</span></td><td>Erro durante execução (bloqueio, falha do robô, etc.).</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout--info">
+        <div class="callout__icon">🔄</div>
+        <div><p>A lista de tarefas é <strong>atualizada automaticamente a cada 3 segundos</strong>.</p></div>
+      </div>
+
+      <h3>Prioridade de Tarefas</h3>
+      <p>Após criar uma tarefa, ela entra automaticamente na fila de agendamento com status "Pendente".</p>
+      <ul>
+        <li>A prioridade pode ser ajustada — <strong>menor valor = maior prioridade</strong>.</li>
+        <li>Valor padrão: <strong>8</strong>.</li>
+        <li>Quando as prioridades são iguais, as tarefas são ordenadas por <strong>hora de criação</strong>.</li>
+      </ul>
+
+      <h3>Detalhes da Tarefa</h3>
+      <p>Ao clicar em "Detalhes" de uma tarefa, é exibido:</p>
+      <ul>
+        <li>Número e nome da tarefa</li>
+        <li>Tipo (Custom Task, Point-to-Point, etc.)</li>
+        <li>Fonte (pager, app, etc.) e modo (designado ou inteligente)</li>
+        <li>Robô atribuído, mapa, empresa</li>
+        <li>Horários de criação e conclusão</li>
+        <li><strong>Timeline de execução</strong> — com timestamps de cada etapa (início, robô designado, chegadas, conclusão)</li>
+      </ul>
+
+      <!-- ══ ROBOTS ══ -->
+      <h2 id="robots">Gerenciamento de Robôs</h2>
+
+      <h3>Ativação de Robôs</h3>
+      <p>Robôs que <strong>não ativaram os serviços cloud</strong> não podem:</p>
+      <ul>
+        <li>Sincronizar mapas</li>
+        <li>Participar do agendamento de tarefas</li>
+      </ul>
+      <p>A ativação é feita exclusivamente pelo <strong>Super Administrador iBEN</strong>.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Informação</th><th>Descrição</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Nº do Robô</strong></td><td>Identificador único (ex: ABC12390865008)</td></tr>
+            <tr><td><strong>Nome</strong></td><td>Nome atribuído (ex: "Robô Produção 1")</td></tr>
+            <tr><td><strong>Modelo</strong></td><td>X300, I300B-L, etc.</td></tr>
+            <tr><td><strong>Status</strong></td><td>Online / Offline</td></tr>
+            <tr><td><strong>Bateria</strong></td><td>Percentual atual (ex: 40%)</td></tr>
+            <tr><td><strong>Duração do Serviço</strong></td><td>Tempo desde a ativação</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout--info">
+        <div class="callout__icon">🔄</div>
+        <div><p>A lista de robôs é <strong>atualizada automaticamente a cada 3 segundos</strong>.</p></div>
+      </div>
+
+      <!-- ══ ROBOT DETAILS ══ -->
+      <h2 id="robot-details">Detalhes do Robô</h2>
+
+      <h3>Informações Básicas</h3>
+      <ul>
+        <li>Número, nome e modelo do robô</li>
+        <li>Status: Idle, Em execução, Carregando, etc.</li>
+        <li>Versões de software e firmware</li>
+        <li>SIM card e operadora (se configurado)</li>
+        <li>Tempo de ativação e registro</li>
+        <li>Localização (região e endereço detalhado)</li>
+      </ul>
+
+      <h3>Monitoramento de Saúde</h3>
+      <p>Exibe o status de cada componente do robô:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>#</th><th>Componente</th><th>Status Possível</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Motor</td><td><span class="badge badge--green">Operando Normal</span></td></tr>
+            <tr><td>2</td><td>IMU (Unidade Inercial)</td><td><span class="badge badge--green">Operando Normal</span></td></tr>
+            <tr><td>3</td><td>Bateria</td><td><span class="badge badge--green">Operando Normal</span></td></tr>
+            <tr><td>4</td><td>Câmera de Profundidade</td><td><span class="badge badge--green">Normal</span> / <span class="badge badge--red">Anormal</span></td></tr>
+            <tr><td>5</td><td>Odômetro</td><td><span class="badge badge--green">Operando Normal</span></td></tr>
+            <tr><td>6</td><td>Laser (LiDAR)</td><td><span class="badge badge--green">Operando Normal</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ══ REMOTE TOOLS ══ -->
+      <h2 id="remote">Ferramentas Remotas</h2>
+
+      <div class="cards">
+        <div class="card">
+          <div class="card__icon card__icon--blue">📝</div>
+          <div class="card__title">Logs Remotos</div>
+          <div class="card__desc">Obter logs do robô remotamente (tela interativa, placa-mãe) — filtrar por tipo e período.</div>
+        </div>
+        <div class="card">
+          <div class="card__icon card__icon--green">📦</div>
+          <div class="card__title">Bag Package</div>
+          <div class="card__desc">Obter pacotes de dados gravados pelo robô (últimos 7 dias, ~3h de armazenamento). Download local disponível.</div>
+        </div>
+        <div class="card">
+          <div class="card__icon card__icon--purple">🖥️</div>
+          <div class="card__title">Desktop Remoto</div>
+          <div class="card__desc">Conectar-se à tela interativa do robô remotamente para solução de problemas.</div>
+        </div>
+        <div class="card">
+          <div class="card__icon card__icon--orange">📷</div>
+          <div class="card__title">Imagem Remota</div>
+          <div class="card__desc">Acessar a câmera central do robô em tempo real para assistência no troubleshooting.</div>
+        </div>
+        <div class="card">
+          <div class="card__icon card__icon--teal">💻</div>
+          <div class="card__title">SSH Remoto</div>
+          <div class="card__desc">Conexão criptografada para operações de linha de comando, transferência de arquivos e análise de logs.</div>
+        </div>
+        <div class="card">
+          <div class="card__icon card__icon--red">🔀</div>
+          <div class="card__title">Troca de Modo</div>
+          <div class="card__desc">Alternar entre modo Manual e Automático. Em modo manual, nenhuma tarefa é emitida (ideal para manutenção).</div>
+        </div>
+      </div>
+
+      <!-- ══ FIRMWARE ══ -->
+      <h2 id="firmware">Atualização de Firmware (OTA)</h2>
+      <p>Gerencie o processo de atualização de firmware dos robôs remotamente.</p>
+
+      <h3>Status do Plano de Atualização</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Status</th><th>Ações Disponíveis</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="badge badge--orange">Pendente</span></td><td>Detalhes, Iniciar, Cancelar</td></tr>
+            <tr><td><span class="badge badge--blue">Enviando</span></td><td>Detalhes, Cancelar</td></tr>
+            <tr><td><span class="badge badge--red">Cancelado</span></td><td>Apenas Detalhes</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Criar Plano de Atualização</h3>
+      <ol class="steps">
+        <li><div><strong>Nome do Plano:</strong> Obrigatório — identifique o plano.</div></li>
+        <li><div><strong>Título e Descrição:</strong> Resumo da atualização (melhorias, correções, etc.).</div></li>
+        <li><div><strong>Escopo:</strong> Selecione: Firmware da Tela Interativa, Firmware da Placa-Mãe, Firmware Embedded.</div></li>
+        <li><div><strong>Upload do Pacote:</strong> Arraste ou clique para enviar arquivo .zip. O sistema extrai versões e MD5 automaticamente.</div></li>
+        <li><div><strong>Condições:</strong> Definir por Nº do Robô ou Nº do Mapa para controlar o escopo de atualização.</div></li>
+      </ol>
+
+      <!-- ══ PERMISSIONS ══ -->
+      <h2 id="permissions">Permissões e Administração</h2>
+
+      <h3>Gerenciamento de Empresa</h3>
+      <p>Cadastrar e gerenciar empresas no sistema. Campos obrigatórios:</p>
+      <ul>
+        <li>Nome da Empresa, Telefone, Responsável, E-mail</li>
+        <li>Status: Normal ou Desativada</li>
+      </ul>
+
+      <h3>Gerenciamento de Roles</h3>
+      <p>Crie roles customizados com permissões granulares:</p>
+      <ul>
+        <li>Selecione permissões individuais: Configuração, Operação e sub-módulos</li>
+        <li>Defina ordem de exibição e status (Normal / Desativado)</li>
+      </ul>
+
+      <h3>Gerenciamento de Usuários</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Campo</th><th>Obrigatório?</th><th>Descrição</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Nome</td><td>✅</td><td>Nome do usuário</td></tr>
+            <tr><td>Conta de Login</td><td>✅</td><td>Conta para acessar o sistema</td></tr>
+            <tr><td>Senha</td><td>✅</td><td>Senha de acesso</td></tr>
+            <tr><td>Role</td><td>✅</td><td>Perfil de permissões atribuído</td></tr>
+            <tr><td>Telefone</td><td>❌</td><td>Contato do usuário</td></tr>
+            <tr><td>E-mail</td><td>❌</td><td>E-mail do usuário</td></tr>
+            <tr><td>Gênero</td><td>❌</td><td>Masculino / Feminino</td></tr>
+            <tr><td>Empresa</td><td>❌</td><td>Padrão: empresa atual</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ══ LOGS ══ -->
+      <h2 id="logs">Logs do Sistema</h2>
+
+      <h3>Log de Operações</h3>
+      <p>Registra todas as ações realizadas por usuários na plataforma:</p>
+      <ul>
+        <li>Descrição e nome do método</li>
+        <li>Tipo de operação (PC)</li>
+        <li>Operador, endereço IP e localização</li>
+        <li>Status (Sucesso / Falha)</li>
+        <li>Data, horário e tempo de execução</li>
+      </ul>
+      <p>Clique em "Detalhes" para ver o request address, parâmetros, retorno e informações de exceção.</p>
+
+      <h3>Log de Login</h3>
+      <p>Registra todas as tentativas de login:</p>
+      <ul>
+        <li>Nome e conta do usuário</li>
+        <li>Endereço IP e localização</li>
+        <li>Status e informação do login</li>
+        <li>Data e horário</li>
+      </ul>
+
+    </main>
+  </div>
+
+  <footer class="footer">
+    <span>© 2026 iBEN Robot — Beijing Huiwen Technology Co., Ltd.</span>
+    <span><a href="index.html">← Voltar ao Início</a></span>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

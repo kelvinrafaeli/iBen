@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manutenção & Cuidados — iBEN Docs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="header__logo">
+      <div class="header__logo-icon">iB</div>
+      iBEN Docs
+    </a>
+    <nav class="header__nav">
+      <a href="index.html">Início</a>
+      <a href="robot-x300b.html">Robô X300B</a>
+      <a href="ims-platform.html">Plataforma iMS</a>
+      <a href="installation.html">Instalação</a>
+      <a href="maintenance.html" class="active">Manutenção</a>
+    </nav>
+    <div class="header__search">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+      <input type="text" placeholder="Buscar na documentação...">
+    </div>
+  </header>
+
+  <div class="search-results"><div class="search-results__panel"></div></div>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <div class="sidebar__section">
+        <div class="sidebar__title">Manutenção</div>
+        <a href="maintenance.html" class="sidebar__link active">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+          Visão Geral
+        </a>
+        <ul class="sidebar__sublinks">
+          <li><a href="#safety">Segurança</a></li>
+          <li><a href="#floor">Inspeção do Piso</a></li>
+          <li><a href="#shelf-inspection">Inspeção de Estantes</a></li>
+          <li><a href="#robot-inspection">Inspeção do Robô</a></li>
+          <li><a href="#environment">Ambiente de Uso</a></li>
+          <li><a href="#troubleshooting">Solução de Problemas</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar__section">
+        <div class="sidebar__title">Navegação</div>
+        <a href="index.html" class="sidebar__link">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0h4"/></svg>
+          Voltar ao Início
+        </a>
+      </div>
+    </aside>
+
+    <main class="main">
+
+      <div class="breadcrumb">
+        <a href="index.html">Início</a>
+        <span>›</span>
+        <strong>Manutenção & Cuidados</strong>
+      </div>
+
+      <h1>Manutenção & Cuidados</h1>
+      <p>Procedimentos de manutenção preventiva, inspeções regulares, avisos de segurança e solução de problemas para o robô X300B.</p>
+
+      <!-- ══ SAFETY ══ -->
+      <h2 id="safety">⚠️ Segurança — Leia com Atenção</h2>
+
+      <div class="callout callout--danger">
+        <div class="callout__icon">🚨</div>
+        <div>
+          <strong>AVISO CRÍTICO</strong>
+          <p>Somente pessoal autorizado que tenha passado por <strong>treinamento de segurança</strong> pode realizar manutenção no sistema do robô. O treinamento inclui capacitação do fabricante/distribuidor sobre o sistema do robô.</p>
+        </div>
+      </div>
+
+      <div class="callout callout--danger">
+        <div class="callout__icon">⛔</div>
+        <div>
+          <strong>AVISO — Remoção de Peças</strong>
+          <p>Não remova ou altere peças sem autorização. Remoção incorreta ou alteração de peças pode causar <strong>operação anormal e graves problemas de segurança</strong>.</p>
+        </div>
+      </div>
+
+      <div class="callout callout--warning">
+        <div class="callout__icon">⚠️</div>
+        <div>
+          <strong>Antes de qualquer manutenção</strong>
+          <ul style="margin:0; padding-left:1.2rem;">
+            <li><strong>Desligue o robô</strong> para evitar movimentos inesperados por tarefas agendadas.</li>
+            <li>Realize manutenção em <strong>área designada</strong>.</li>
+            <li>Se precisar acessar a parte inferior do robô, <strong>levante-o com equipamento adequado</strong> e garanta estabilidade.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout callout--warning">
+        <div class="callout__icon">🤚</div>
+        <div>
+          <strong>CUIDADO — Partes Móveis</strong>
+          <ul style="margin:0; padding-left:1.2rem;">
+            <li><strong>Não coloque as mãos</strong> entre o pallet e a carcaça ou entre o pallet e a estante — risco de esmagamento.</li>
+            <li>Engrenagens internas e circuitos elétricos podem causar <strong>esmagamento, emaranhamento ou choque elétrico</strong>.</li>
+            <li>Se for necessário remover a carcaça, <strong>desconecte a bateria imediatamente</strong> ou notifique um técnico autorizado.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout callout--danger">
+        <div class="callout__icon">🛑</div>
+        <div>
+          <strong>Área de trabalho do robô</strong>
+          <p>Se precisar entrar na área de trabalho do robô em uma <strong>emergência</strong>, pare o robô PRIMEIRO. Caso contrário, pode causar <strong>graves problemas de segurança</strong>.</p>
+        </div>
+      </div>
+
+      <!-- ══ FLOOR INSPECTION ══ -->
+      <h2 id="floor">Inspeção do Piso</h2>
+      <p>Realize <strong>semanalmente</strong>:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Item</th><th>Frequência</th><th>Método</th><th>O que verificar</th><th>Ação de Manutenção</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Área de Corredor</strong></td>
+              <td>Semanal</td>
+              <td>Visual</td>
+              <td>
+                <ul class="checklist" style="margin:0;">
+                  <li>Sem materiais extras ou poeira no piso</li>
+                  <li>Piso intacto e sem danos</li>
+                </ul>
+              </td>
+              <td>
+                <ul style="margin:0; padding-left:1rem;">
+                  <li>Use aspirador para remover poeira e detritos</li>
+                  <li>Use cola de piso ou cimento para reparar danos</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Área de Estantes</strong></td>
+              <td>Semanal</td>
+              <td>Visual</td>
+              <td>Mesmo que acima</td>
+              <td>Mesmo que acima</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ══ SHELF INSPECTION ══ -->
+      <h2 id="shelf-inspection">Inspeção de Estantes</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Item</th><th>Frequência</th><th>Método</th><th>O que verificar</th><th>Ação</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Qualidade da Estante</strong></td>
+              <td>Mensal</td>
+              <td>Visual</td>
+              <td>Verificar se a estante está deformada ou com parafusos soltos.</td>
+              <td>Reparar ou substituir conforme necessário.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ══ ROBOT INSPECTION ══ -->
+      <h2 id="robot-inspection">Inspeção do Robô</h2>
+      <p>Tabela completa de inspeções periódicas do robô X300B:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Componente</th><th>Frequência</th><th>Método</th><th>O que verificar</th><th>Ação de Manutenção</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Energia / Bateria</strong></td>
+              <td>Semanal</td>
+              <td>Tela do robô</td>
+              <td>Verificar nível de bateria na tela.</td>
+              <td>Carregar o robô via comando ou empurrando até a estação de carga.</td>
+            </tr>
+            <tr>
+              <td><strong>Carcaça</strong></td>
+              <td>Mensal</td>
+              <td>Visual</td>
+              <td>
+                <ul class="checklist" style="margin:0;">
+                  <li>Livre de poeira e sujeira visível</li>
+                  <li>Intacta, sem danos</li>
+                </ul>
+              </td>
+              <td>
+                <ul style="margin:0; padding-left:1rem;">
+                  <li>Limpar com pano úmido (sem gotejar)</li>
+                  <li>Se danificada: contatar assistência técnica</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Fita LED</strong></td>
+              <td>Mensal</td>
+              <td>Visual</td>
+              <td>
+                <ul class="checklist" style="margin:0;">
+                  <li>Acende normalmente ao ligar</li>
+                  <li>Cor uniforme em toda a volta</li>
+                </ul>
+              </td>
+              <td>
+                <ul style="margin:0; padding-left:1rem;">
+                  <li>Verificar se o conector está solto</li>
+                  <li>Substituir fita LED com cor inconsistente</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Chassi (parte inferior)</strong></td>
+              <td>Mensal</td>
+              <td>Visual</td>
+              <td>Verificar se há poeira ou material estranho no chassi.</td>
+              <td>Limpar com aspirador de pó.</td>
+            </tr>
+            <tr id="wheels">
+              <td><strong>Rodas de Tração</strong></td>
+              <td>Mensal</td>
+              <td>Visual</td>
+              <td>
+                <ul class="checklist" style="margin:0;">
+                  <li>Livres de material estranho</li>
+                  <li>Sem danos ou desgaste excessivo</li>
+                </ul>
+              </td>
+              <td>
+                <ul style="margin:0; padding-left:1rem;">
+                  <li>Limpar materiais estranhos</li>
+                  <li>Se danificada/gasta: contatar assistência técnica</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Rodas Movidas</strong></td>
+              <td>Mensal</td>
+              <td>Visual</td>
+              <td>
+                <ul class="checklist" style="margin:0;">
+                  <li>Livres de material estranho</li>
+                  <li>Sem danos ou desgaste</li>
+                </ul>
+              </td>
+              <td>Substituir rodas danificadas ou severamente gastas.</td>
+            </tr>
+            <tr id="lidar">
+              <td><strong>LiDAR (Sensor Laser)</strong></td>
+              <td>Mensal</td>
+              <td>Visual</td>
+              <td>A lente deve estar limpa, sem poeira ou material estranho.</td>
+              <td>Limpar com pano macio. Se necessário, usar pano não-tecido com álcool anidro.</td>
+            </tr>
+            <tr>
+              <td><strong>Pad de Carregamento</strong></td>
+              <td>Mensal</td>
+              <td>Visual</td>
+              <td>Pad e eletrodos devem estar limpos.</td>
+              <td>Limpar com pano macio e limpo.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout--info">
+        <div class="callout__icon">📋</div>
+        <div>
+          <strong>Resumo das frequências</strong>
+          <p><strong>Semanal:</strong> Piso, Bateria<br>
+          <strong>Mensal:</strong> Carcaça, LED, Chassi, Rodas, LiDAR, Pad de carregamento, Estantes</p>
+        </div>
+      </div>
+
+      <!-- ══ ENVIRONMENT ══ -->
+      <h2 id="environment">Condições de Ambiente de Uso</h2>
+
+      <div class="callout callout--danger">
+        <div class="callout__icon">🔥</div>
+        <div>
+          <strong>NÃO use o robô em:</strong>
+          <ul style="margin:0; padding-left:1.2rem;">
+            <li>Ambientes de <strong>alta temperatura, alta pressão, inflamáveis ou explosivos</strong></li>
+            <li>Ambientes <strong>úmidos, com líquidos ou substâncias pegajosas</strong></li>
+            <li>Locais onde dispositivos wireless são <strong>explicitamente proibidos</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout callout--warning">
+        <div class="callout__icon">⚠️</div>
+        <div>
+          <strong>Condições adicionais:</strong>
+          <ul style="margin:0; padding-left:1.2rem;">
+            <li><strong>Não</strong> exponha a bateria a altas temperaturas, aquecedores, microondas, fornos.</li>
+            <li>O robô é adequado para <strong>pisos relativamente planos</strong> — não indicado para degraus altos, grandes inclinações ou gaps.</li>
+            <li>Se o robô ficar preso em um buraco, <strong>empurre pelo chassi</strong>. Não puxe ou empurre com força excessiva.</li>
+            <li><strong>Não</strong> descarte o robô como lixo doméstico. Siga as regulamentações locais de descarte.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ══ TROUBLESHOOTING ══ -->
+      <h2 id="troubleshooting">Solução de Problemas Comuns</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Problema</th><th>Possível Causa</th><th>Solução</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Robô não liga</strong></td>
+              <td>Disjuntor desligado; bateria descarregada</td>
+              <td>Verifique o Air Switch (disjuntor). Carregue a bateria.</td>
+            </tr>
+            <tr>
+              <td><strong>Robô não se move</strong></td>
+              <td>Botão de emergência pressionado; obstáculo detectado; modo manual ativo</td>
+              <td>Verifique e libere o botão de emergência. Remova obstáculos. Troque para modo automático.</td>
+            </tr>
+            <tr>
+              <td><strong>Robô não carrega</strong></td>
+              <td>Pad de carregamento sujo; desalinhamento com a estação</td>
+              <td>Limpe o pad de carregamento e os eletrodos. Reposicione o robô na estação.</td>
+            </tr>
+            <tr>
+              <td><strong>Navegação imprecisa</strong></td>
+              <td>LiDAR sujo; mapa desatualizado; ambiente alterado</td>
+              <td>Limpe o LiDAR. Atualize o mapa. Refaça o mapeamento se necessário.</td>
+            </tr>
+            <tr>
+              <td><strong>Robô preso em buraco</strong></td>
+              <td>Piso irregular, gap ou buraco</td>
+              <td>Empurre o robô pelo chassi para sair. Não force. Repare o piso.</td>
+            </tr>
+            <tr>
+              <td><strong>Fita LED não acende</strong></td>
+              <td>Conector solto; fita danificada</td>
+              <td>Verifique o conector. Substitua a fita LED se necessário.</td>
+            </tr>
+            <tr>
+              <td><strong>Câmera de profundidade anormal</strong></td>
+              <td>Sensor com defeito; lente obstruída</td>
+              <td>Limpe a lente. Verifique o status no Health Monitor (iMS). Contate assistência.</td>
+            </tr>
+            <tr>
+              <td><strong>Colisão detectada — robô parou</strong></td>
+              <td>Sensor de colisão ativado</td>
+              <td>Remova o obstáculo. Faça o reset manual do status de colisão na tela.</td>
+            </tr>
+            <tr>
+              <td><strong>Pager sem resposta</strong></td>
+              <td>Wi-Fi desconectado; pager offline; configuração inválida</td>
+              <td>Verifique conexão Wi-Fi e LEDs do pager. Reconfigure se necessário no iMS.</td>
+            </tr>
+            <tr>
+              <td><strong>Tarefa não é executada</strong></td>
+              <td>Robô em modo manual; bateria baixa; sem robô disponível</td>
+              <td>Troque para modo automático. Carregue o robô. Verifique disponibilidade no iMS.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout--info">
+        <div class="callout__icon">📞</div>
+        <div>
+          <strong>Problemas persistentes?</strong>
+          <p>Se o problema não for resolvido com as soluções acima, entre em contato com o suporte técnico <strong>Ganzer Automação</strong>:</p>
+          <p><strong>Tel:</strong> (54) 3222-5746 &nbsp;|&nbsp; <strong>Email:</strong> suporte@ganzerautomacao.com.br</p>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <footer class="footer">
+    <span>© 2026 iBEN Robot — Beijing Huiwen Technology Co., Ltd.</span>
+    <span><a href="index.html">← Voltar ao Início</a></span>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

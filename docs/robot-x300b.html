@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robô X300B — iBEN Docs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ══ Header ══ -->
+  <header class="header">
+    <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="header__logo">
+      <div class="header__logo-icon">iB</div>
+      iBEN Docs
+    </a>
+    <nav class="header__nav">
+      <a href="index.html">Início</a>
+      <a href="robot-x300b.html" class="active">Robô X300B</a>
+      <a href="ims-platform.html">Plataforma iMS</a>
+      <a href="installation.html">Instalação</a>
+      <a href="maintenance.html">Manutenção</a>
+    </nav>
+    <div class="header__search">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+      <input type="text" placeholder="Buscar na documentação...">
+    </div>
+  </header>
+
+  <div class="search-results"><div class="search-results__panel"></div></div>
+
+  <div class="layout">
+
+    <!-- ── Sidebar ── -->
+    <aside class="sidebar">
+      <div class="sidebar__section">
+        <div class="sidebar__title">Robô X300B</div>
+        <a href="robot-x300b.html" class="sidebar__link active">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          Visão Geral
+        </a>
+        <ul class="sidebar__sublinks">
+          <li><a href="#power">Ligar / Desligar</a></li>
+          <li><a href="#emergency">Parada de Emergência</a></li>
+          <li><a href="#shelf-specs">Especificações de Estante</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar__section">
+        <div class="sidebar__title">Tarefas</div>
+        <ul class="sidebar__sublinks">
+          <li><a href="#quick-task">Tarefa Rápida</a></li>
+          <li><a href="#cruise-task">Tarefa de Patrulha</a></li>
+          <li><a href="#flatbed">Transporte Flatbed</a></li>
+          <li><a href="#custom-task">Tarefa Personalizada</a></li>
+          <li><a href="#task-list">Lista de Tarefas</a></li>
+          <li><a href="#task-records">Histórico de Tarefas</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar__section">
+        <div class="sidebar__title">Configurações</div>
+        <ul class="sidebar__sublinks">
+          <li><a href="#settings">Configurações Gerais</a></li>
+          <li><a href="#navigation-modes">Modos de Navegação</a></li>
+          <li><a href="#map-management">Gerenciamento de Mapas</a></li>
+          <li><a href="#system-settings">Configurações do Sistema</a></li>
+          <li><a href="#language">Idioma</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar__section">
+        <div class="sidebar__title">Navegação</div>
+        <a href="index.html" class="sidebar__link">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0h4"/></svg>
+          Voltar ao Início
+        </a>
+      </div>
+    </aside>
+
+    <!-- ── Main Content ── -->
+    <main class="main">
+
+      <div class="breadcrumb">
+        <a href="index.html">Início</a>
+        <span>›</span>
+        <strong>Robô X300B</strong>
+      </div>
+
+      <h1>Manual do Robô X300B</h1>
+      <p>Guia completo de operação do robô AMR industrial X300B — desde o primeiro uso até configurações avançadas.</p>
+
+      <!-- ── Specs ── -->
+      <div class="specs">
+        <div class="spec">
+          <div class="spec__value">X300B</div>
+          <div class="spec__label">Modelo</div>
+        </div>
+        <div class="spec">
+          <div class="spec__value">300 kg</div>
+          <div class="spec__label">Carga Máxima</div>
+        </div>
+        <div class="spec">
+          <div class="spec__value">1.2 m/s</div>
+          <div class="spec__label">Velocidade Máx.</div>
+        </div>
+        <div class="spec">
+          <div class="spec__value">60 mm</div>
+          <div class="spec__label">Curso de Elevação</div>
+        </div>
+      </div>
+
+      <!-- ══ LIGA / DESLIGA ══ -->
+      <h2 id="power">Ligar e Desligar o Robô</h2>
+
+      <h3>Ligar</h3>
+      <ol class="steps">
+        <li>
+          <div>
+            <strong>Ligue o Air Switch (disjuntor)</strong>
+            Localize o botão de energia no chassi do robô. Primeiro, ligue o disjuntor.
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Pressione o botão de energia uma vez</strong>
+            O indicador LED ficará <strong>azul</strong>, indicando que o robô ligou com sucesso.
+          </div>
+        </li>
+      </ol>
+
+      <h3>Desligar</h3>
+      <ol class="steps">
+        <li>
+          <div>
+            <strong>Pressione e segure o botão de energia</strong>
+            Mantenha pressionado até que o indicador LED se apague.
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Aguarde o desligamento completo</strong>
+            Depois que o robô estiver completamente desligado, desligue o disjuntor (Air Switch).
+          </div>
+        </li>
+      </ol>
+
+      <div class="callout callout--warning">
+        <div class="callout__icon">⚠️</div>
+        <div>
+          <strong>Importante</strong>
+          <p>Sempre aguarde o desligamento completo do robô antes de desligar o disjuntor. Desligar abruptamente pode causar perda de dados.</p>
+        </div>
+      </div>
+
+      <!-- ══ EMERGÊNCIA ══ -->
+      <h2 id="emergency">Botão de Parada de Emergência</h2>
+      <p>O robô possui <strong>botões de emergência</strong> localizados em:</p>
+      <ul>
+        <li><strong>Topo do robô</strong></li>
+        <li><strong>Laterais esquerda e direita do chassi</strong></li>
+      </ul>
+
+      <div class="callout callout--danger">
+        <div class="callout__icon">🚨</div>
+        <div>
+          <strong>Em caso de emergência</strong>
+          <p>Pressione imediatamente qualquer botão de emergência. O robô irá parar instantaneamente.</p>
+          <p>Para retomar a operação: <strong>gire o botão no sentido horário</strong> e siga as instruções na tela do robô.</p>
+        </div>
+      </div>
+
+      <!-- ══ ESPECIFICAÇÕES DE ESTANTE ══ -->
+      <h2 id="shelf-specs">Especificações de Estante / Rack</h2>
+      <p>O robô X300B é projetado para transportar estantes padronizadas. Veja os requisitos:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Item</th><th>Estante</th><th>Carrinho</th><th>Observação</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Largura da perna</td><td>≥ 30 mm</td><td>—</td><td>Superfície branca ou prata fosca (preferível)</td></tr>
+            <tr><td>Tamanho mínimo</td><td>700 × 400 mm</td><td>800 × 400 mm</td><td>700 mm para o robô entrar</td></tr>
+            <tr><td>Tamanho máximo</td><td>900 × 800 mm</td><td>—</td><td>Acima disso, requer validação de P&D</td></tr>
+            <tr><td>Tamanho padrão</td><td>700 × 700 mm</td><td>800 × 700 mm</td><td>Recomendado</td></tr>
+            <tr><td>Altura da base de carga</td><td colspan="2">300 mm (faixa: 290–310 mm)</td><td>Chassi do robô tem 270 mm</td></tr>
+            <tr><td>Altura máxima</td><td colspan="2">1.500 mm</td><td>—</td></tr>
+            <tr><td>Viga auxiliar (entre pernas)</td><td colspan="2">Altura do chão ≤ 150 mm, largura ≥ 30 mm</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Requisitos de Espaço</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Posição</th><th>Distância Necessária</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Laterais (cada lado)</td><td>≥ 150 mm</td></tr>
+            <tr><td>Parte traseira</td><td>≥ 200 mm</td></tr>
+            <tr><td>Frente</td><td>≥ 1.000 mm</td></tr>
+            <tr><td>Entre múltiplas estantes</td><td>≥ 150 mm</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ══ TAREFAS ══ -->
+      <h2 id="quick-task">Tarefa Rápida (Quick Task)</h2>
+      <p>Permite definir um ponto de coleta e um ponto de entrega. O robô vai automaticamente ao ponto de coleta, identifica a estante, levanta, transporta e abaixa no destino.</p>
+
+      <ol class="steps">
+        <li><div><strong>Selecione "Tarefa Rápida" na tela inicial</strong></div></li>
+        <li><div><strong>Escolha o ponto de Jack-up (coleta)</strong> na lista à esquerda da interface.</div></li>
+        <li><div><strong>Escolha o ponto de Jack-down (entrega)</strong> na lista à direita da interface.</div></li>
+        <li><div><strong>Defina a ação pós-tarefa:</strong> Retornar ao carregador, retornar ao ponto de espera ou permanecer no local.</div></li>
+        <li><div><strong>Clique em "Executar Agora"</strong> — o robô iniciará a tarefa após o aviso sonoro.</div></li>
+      </ol>
+
+      <div class="callout callout--info">
+        <div class="callout__icon">💡</div>
+        <div>
+          <p><strong>Dica:</strong> Durante o transporte, toque na tela para <strong>pausar</strong> a tarefa. Use "Continuar Tarefa" para retomar ou "Encerrar Tarefa" para cancelar.</p>
+        </div>
+      </div>
+
+      <!-- ── Cruise Task ── -->
+      <h2 id="cruise-task">Tarefa de Patrulha (Cruise Task)</h2>
+      <p>O robô percorre uma rota predefinida, parando em pontos designados por um tempo configurável — ideal para distribuição de materiais.</p>
+
+      <ol class="steps">
+        <li><div><strong>Selecione "Tarefa de Patrulha" na tela inicial</strong></div></li>
+        <li><div><strong>Selecione os pontos de entrega</strong> na lista de pontos à esquerda.</div></li>
+        <li><div><strong>Configure o tempo de parada</strong> em cada ponto da rota (exibida à direita).</div></li>
+        <li><div><strong>Defina a ação pós-tarefa</strong> (retornar ao carregador, standby ou ficar no lugar).</div></li>
+        <li><div><strong>Clique em "Salvar Rota"</strong> — defina nome, número de ciclos, horário agendado e repetição.</div></li>
+      </ol>
+
+      <div class="callout callout--success">
+        <div class="callout__icon">✅</div>
+        <div><p>Tarefas de patrulha salvas ficam disponíveis na <strong>Lista de Tarefas</strong> para execução rápida posterior.</p></div>
+      </div>
+
+      <!-- ── Flatbed ── -->
+      <h2 id="flatbed">Transporte Flatbed (Sem Elevação)</h2>
+      <p>Transporte simples de ponto a ponto ou multi-ponto, <strong>sem elevação de estante</strong>.</p>
+
+      <ol class="steps">
+        <li><div><strong>Selecione "Tarefa Rápida" na tela inicial</strong></div></li>
+        <li><div><strong>Selecione os pontos</strong> para formar a rota.</div></li>
+        <li><div><strong>Escolha ação pós-tarefa</strong> (carregador, standby, permanecer no local).</div></li>
+        <li><div><strong>Configure a velocidade:</strong> baixa, média ou alta.</div></li>
+        <li><div><strong>Clique em "Executar Agora"</strong>.</div></li>
+      </ol>
+
+      <!-- ── Custom Task ── -->
+      <h2 id="custom-task">Tarefa Personalizada (Custom Task)</h2>
+      <p>Máxima flexibilidade: defina a rota, configure ações por ponto (elevar, abaixar, parar) e tempo de permanência.</p>
+
+      <ol class="steps">
+        <li><div><strong>Selecione "Tarefa Personalizada" na tela inicial</strong></div></li>
+        <li><div><strong>Selecione os waypoints</strong> na lista à esquerda.</div></li>
+        <li><div><strong>Configure as ações por ponto:</strong> elevar estante, abaixar estante ou permanecer. Defina o tempo de permanência.</div></li>
+        <li><div><strong>Defina a ação pós-tarefa:</strong> retornar ao carregador normal, carregador inteligente, standby ou permanecer no local.</div></li>
+        <li><div><strong>Salve a rota</strong> — defina nome, ciclos, agendamento e repetição.</div></li>
+      </ol>
+
+      <!-- ── Task List ── -->
+      <h2 id="task-list">Lista de Tarefas</h2>
+      <p>Tarefas de patrulha e tarefas personalizadas salvas aparecem automaticamente na Lista de Tarefas.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Botão</th><th>Função</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Executar Agora</strong></td><td>Executa a tarefa selecionada imediatamente.</td></tr>
+            <tr><td><strong>Editar</strong></td><td>Abre a configuração para edição.</td></tr>
+            <tr><td><strong>Excluir</strong></td><td>Remove a tarefa da lista.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ── Task Records ── -->
+      <h2 id="task-records">Histórico de Tarefas</h2>
+      <p>Exibe o total de tarefas e o total do dia atual. Permite filtrar por:</p>
+      <ul>
+        <li>Status (Concluída, Cancelada, Falha)</li>
+        <li>Tipo de tarefa</li>
+        <li>Fonte da tarefa</li>
+        <li>Período de datas</li>
+      </ul>
+      <p>Cada registro mostra tipo, número de pontos, horário de início/fim, status e duração.</p>
+
+      <!-- ── Charging ── -->
+      <h2 id="charging">Retornar ao Carregador / Standby</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Comando</th><th>Ação</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Retornar ao Carregador</strong></td><td>O robô retorna imediatamente à estação de carregamento.</td></tr>
+            <tr><td><strong>Retornar ao Standby</strong></td><td>O robô retorna ao ponto de espera definido.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ══ CONFIGURAÇÕES ══ -->
+      <h2 id="settings">Configurações do Robô</h2>
+      <p>Acesse clicando em <strong>[Configurações]</strong> na tela inicial. A senha padrão é <code>6666</code>.</p>
+
+      <h3>Informações do Robô</h3>
+      <p>Visualize: nome, número, versões (tela interativa, algoritmo, embedded), nome da hotspot e SIM card.</p>
+
+      <h3>Configuração de Entrega</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Configuração</th><th>Descrição</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Tamanho do Container</strong></td><td>Padrão: 700 × 700 mm. Ou personalizar dimensões.</td></tr>
+            <tr><td><strong>Broadcast (Anúncios)</strong></td><td>Personalizar mensagens de tarefa e alerta de bateria baixa. Habilitar/desabilitar música de fundo.</td></tr>
+            <tr><td><strong>Ajuste de Velocidade</strong></td><td>Controles separados para velocidade <em>com carga</em> e <em>sem carga</em> via slider.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 id="navigation-modes">Modos de Navegação</h3>
+      <div class="cards">
+        <div class="card">
+          <div class="card__icon card__icon--green">🧭</div>
+          <div class="card__title">Navegação Livre</div>
+          <div class="card__desc">O robô planeja autonomamente a melhor rota, escolhendo o caminho mais curto.</div>
+        </div>
+        <div class="card">
+          <div class="card__icon card__icon--blue">🛤️</div>
+          <div class="card__title">Ao Longo da Trilha</div>
+          <div class="card__desc">Segue trilhas padrão mas desvia flexivelmente de obstáculos encontrados.</div>
+        </div>
+        <div class="card">
+          <div class="card__icon card__icon--orange">⛔</div>
+          <div class="card__title">Estritamente na Trilha</div>
+          <div class="card__desc">Segue a trilha rigorosamente. Se houver obstáculo, o robô para até que seja removido.</div>
+        </div>
+      </div>
+
+      <h3>Configurações Gerais</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Configuração</th><th>Descrição</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Relocação de Carga</strong></td><td>Configurar a localização da estação de carregamento.</td></tr>
+            <tr><td><strong>Posição Inicial</strong></td><td>Para cenários onde não há estação de carga — define o ponto inicial.</td></tr>
+            <tr><td><strong>Tipo de Carregador</strong></td><td>Carregador comum ou carregador inteligente (com agendamento automático).</td></tr>
+            <tr><td><strong>Elevador</strong></td><td>Habilitar/desabilitar integração com elevador.</td></tr>
+            <tr><td><strong>Sensor de Colisão</strong></td><td>Quando ativo, o robô para se houver colisão. Requer reset manual.</td></tr>
+            <tr><td><strong>Energia</strong></td><td>Configurar alerta de bateria baixa e carregamento automático.</td></tr>
+            <tr><td><strong>Grupos de Pontos</strong></td><td>Criar agrupamentos lógicos de waypoints para organização.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ══ MAP MANAGEMENT ══ -->
+      <h2 id="map-management">Gerenciamento de Mapas</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Função</th><th>Descrição</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Adicionar Novo Mapa</strong></td><td>Criar mapa para nova área de operação.</td></tr>
+            <tr><td><strong>Trocar Mapa</strong></td><td>Definir qual mapa o robô usa como mapa ativo.</td></tr>
+            <tr><td><strong>Editar Mapa</strong></td><td>Modificar nomes, andares e layout.</td></tr>
+            <tr><td><strong>Excluir Mapa</strong></td><td>Remover permanentemente (não pode ser desfeito!).</td></tr>
+            <tr><td><strong>Upload para Nuvem</strong></td><td>Enviar mapa à nuvem para backup e compartilhamento entre dispositivos.</td></tr>
+            <tr><td><strong>Gerenciamento de Andares</strong></td><td>Gerenciar mapas de cada andar para operação multi-andar.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout--danger">
+        <div class="callout__icon">🚨</div>
+        <div>
+          <strong>Atenção ao excluir mapas</strong>
+          <p>Mapas excluídos <strong>não podem ser recuperados</strong>. Confirme que não são mais necessários antes de excluir.</p>
+        </div>
+      </div>
+
+      <h3>Ferramentas de Edição de Mapa</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Ferramenta</th><th>Descrição</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Posição do Ponto</strong></td><td>Adicionar pontos de tarefa com ângulo de orientação.</td></tr>
+            <tr><td><strong>Linha de Proibição</strong></td><td>Desenhar rotas que o robô não pode percorrer.</td></tr>
+            <tr><td><strong>Rede de Vias</strong></td><td>Criar caminhos lineares (bidirecional, ida, volta).</td></tr>
+            <tr><td><strong>Área</strong></td><td>Criar zonas: proibição, desaceleração, controle de porta, elevador, zona exclusiva.</td></tr>
+            <tr><td><strong>Borracha</strong></td><td>Remover obstáculos do mapa e otimizar.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Processo de Mapeamento (Criar Novo Mapa)</h3>
+      <ol class="steps">
+        <li><div><strong>Selecione o andar</strong> a ser mapeado e clique em "Iniciar Novo Mapa".</div></li>
+        <li><div><strong>Empurre o robô lentamente</strong> por todas as rotas que ele precisará percorrer. O sistema coleta dados em tempo real e exibe a trajetória na tela.</div></li>
+        <li><div><strong>Marque pontos</strong> durante o mapeamento conforme necessário usando "Adicionar Ponto Atual".</div></li>
+        <li><div><strong>Clique "Concluir Mapeamento"</strong> quando todas as rotas estiverem cobertas.</div></li>
+      </ol>
+
+      <!-- ══ SYSTEM SETTINGS ══ -->
+      <h2 id="system-settings">Configurações do Sistema</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Configuração</th><th>Descrição</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Rede Wi-Fi</strong></td><td>Configurar conexão Wi-Fi do robô.</td></tr>
+            <tr><td><strong>Alterar Senha</strong></td><td>Modificar a senha de acesso às configurações.</td></tr>
+            <tr><td><strong>Modo Desenvolvedor</strong></td><td>Para profissionais. Senha: <code>ibenrobot123</code>. <span class="badge badge--red">Não altere sem orientação!</span></td></tr>
+            <tr><td><strong>Permissão de Tarefas</strong></td><td>Quando ativo, requer senha para editar/excluir tarefas.</td></tr>
+            <tr><td><strong>Volume</strong></td><td>Ajustar volume do sistema via slider.</td></tr>
+            <tr><td><strong>Auto-start após ligar</strong></td><td>Tela inicial padrão: homepage ou lista de tarefas.</td></tr>
+            <tr><td><strong>Reset de Fábrica</strong></td><td>Limpa mapas, tarefas, anúncios e músicas. Restaura o estado de fábrica.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout--warning">
+        <div class="callout__icon">⚠️</div>
+        <div>
+          <strong>Modo Desenvolvedor</strong>
+          <p>Senha do modo desenvolvedor: <code>ibenrobot123</code>. Somente profissionais autorizados devem utilizar. Modificações indevidas podem causar mau funcionamento do robô.</p>
+        </div>
+      </div>
+
+      <!-- ══ LANGUAGE ══ -->
+      <h2 id="language">Idioma</h2>
+      <p>O robô suporta múltiplos idiomas: <strong>Chinês, Inglês, Japonês, Coreano e Português</strong>.</p>
+      <p>A troca de idioma pode ser feita em <strong>Configurações → Idioma</strong>.</p>
+
+      <!-- ══ VERSION UPDATE ══ -->
+      <h2 id="version-update">Atualização de Versão</h2>
+      <p>Em <strong>Configurações → Atualização de Versão</strong>, visualize as versões atuais de:</p>
+      <ul>
+        <li>Firmware da tela interativa</li>
+        <li>Firmware da placa-mãe</li>
+        <li>Firmware embedded</li>
+      </ul>
+      <p>Clique em <strong>"Verificar Atualizações"</strong> para checar se há novas versões disponíveis.</p>
+
+      <!-- ══ HARDWARE IoT ══ -->
+      <h2 id="iot-hardware">Hardware IoT Suportado</h2>
+
+      <div class="cards">
+        <div class="card">
+          <div class="card__icon card__icon--blue">📟</div>
+          <div class="card__title">Pager (Wi-Fi)</div>
+          <div class="card__desc">Suporta chamada point-to-point, chamada por grupo de tarefas e agendamento multi-pager.</div>
+        </div>
+        <div class="card">
+          <div class="card__icon card__icon--green">📶</div>
+          <div class="card__title">Roteador Wi-Fi</div>
+          <div class="card__desc">Rede local com acesso à internet para conexão de múltiplos pagers.</div>
+        </div>
+        <div class="card">
+          <div class="card__icon card__icon--purple">📡</div>
+          <div class="card__title">Roteador 4G</div>
+          <div class="card__desc">Para fábricas sem rede Wi-Fi — conecta o pager via rede móvel 4G.</div>
+        </div>
+        <div class="card">
+          <div class="card__icon card__icon--orange">🛗</div>
+          <div class="card__title">Módulo de Elevador</div>
+          <div class="card__desc">Integração robô-elevador para operações multi-andar.</div>
+        </div>
+        <div class="card">
+          <div class="card__icon card__icon--teal">🚪</div>
+          <div class="card__title">Módulo de Porta Automática</div>
+          <div class="card__desc">Permite que o robô passe automaticamente por portas automáticas.</div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <footer class="footer">
+    <span>© 2026 iBEN Robot — Beijing Huiwen Technology Co., Ltd.</span>
+    <span><a href="index.html">← Voltar ao Início</a></span>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

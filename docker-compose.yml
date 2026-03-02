@@ -1,0 +1,7 @@
+services:
+  iben-docs:
+    build: .
+    container_name: iben-docs
+    ports:
+      - "80:80"
+    restart: unless-stopped

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iBEN Robot — Documentação</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ══ Header ══ -->
+  <header class="header">
+    <button class="menu-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="index.html" class="header__logo">
+      <div class="header__logo-icon">iB</div>
+      iBEN Docs
+    </a>
+    <nav class="header__nav">
+      <a href="index.html" class="active">Início</a>
+      <a href="robot-x300b.html">Robô X300B</a>
+      <a href="ims-platform.html">Plataforma iMS</a>
+      <a href="installation.html">Instalação</a>
+      <a href="maintenance.html">Manutenção</a>
+    </nav>
+    <div class="header__search">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+      </svg>
+      <input type="text" placeholder="Buscar na documentação...">
+    </div>
+  </header>
+
+  <!-- ══ Search Results Overlay ══ -->
+  <div class="search-results">
+    <div class="search-results__panel"></div>
+  </div>
+
+  <!-- ══ Layout ══ -->
+  <div class="layout">
+
+    <!-- ── Sidebar ── -->
+    <aside class="sidebar">
+      <div class="sidebar__section">
+        <div class="sidebar__title">Navegação</div>
+        <a href="index.html" class="sidebar__link active">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0h4"/></svg>
+          Início
+        </a>
+        <a href="robot-x300b.html" class="sidebar__link">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          Robô X300B
+        </a>
+        <a href="ims-platform.html" class="sidebar__link">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+          Plataforma iMS
+        </a>
+        <a href="installation.html" class="sidebar__link">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Instalação
+        </a>
+        <a href="maintenance.html" class="sidebar__link">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+          Manutenção
+        </a>
+      </div>
+
+      <div class="sidebar__section">
+        <div class="sidebar__title">Links Rápidos</div>
+        <a href="maintenance.html#safety" class="sidebar__link">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
+          Segurança
+        </a>
+        <a href="robot-x300b.html#quick-task" class="sidebar__link">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          Guia Rápido
+        </a>
+      </div>
+
+      <div class="sidebar__section" style="margin-top:auto; padding-top:1rem; border-top:1px solid var(--border);">
+        <div style="padding: 0 .75rem; font-size:.78rem; color:var(--text-light);">
+          <strong style="color:var(--dark); font-size:.82rem;">Suporte Ganzer Automação</strong><br>
+          Tel: (54) 3222-5746<br>
+          Email: suporte@ganzerautomacao.com.br<br>
+          <a href="https://www.iBENrobot.com" target="_blank">www.iBENrobot.com</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ── Main Content ── -->
+    <main class="main">
+
+      <!-- Hero -->
+      <div class="hero">
+        <h1>Documentação iBEN Robot</h1>
+        <p>Guia completo para operação, instalação e manutenção dos robôs iBEN — série X300B e plataforma iMS.</p>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="specs">
+        <div class="spec">
+          <div class="spec__value">X300B</div>
+          <div class="spec__label">Modelo do Robô</div>
+        </div>
+        <div class="spec">
+          <div class="spec__value">300kg</div>
+          <div class="spec__label">Capacidade de Carga</div>
+        </div>
+        <div class="spec">
+          <div class="spec__value">1.2 m/s</div>
+          <div class="spec__label">Velocidade Máxima</div>
+        </div>
+        <div class="spec">
+          <div class="spec__value">iMS</div>
+          <div class="spec__label">Plataforma Cloud</div>
+        </div>
+      </div>
+
+      <!-- Section: Getting Started -->
+      <h2>Começando</h2>
+      <p>Selecione uma das seções abaixo para acessar a documentação completa do seu robô iBEN.</p>
+
+      <div class="cards">
+        <a href="robot-x300b.html" class="card">
+          <div class="card__icon card__icon--blue">🤖</div>
+          <div class="card__title">Robô X300B</div>
+          <div class="card__desc">Manual completo do robô: ligar/desligar, tipos de tarefas, configurações, mapas e modos de navegação.</div>
+          <div class="card__arrow">Ver documentação →</div>
+        </a>
+
+        <a href="ims-platform.html" class="card">
+          <div class="card__icon card__icon--green">☁️</div>
+          <div class="card__title">Plataforma iMS</div>
+          <div class="card__desc">Sistema de gerenciamento na nuvem: monitoramento de tarefas, gestão de robôs, pagers e firmware.</div>
+          <div class="card__arrow">Ver documentação →</div>
+        </a>
+
+        <a href="installation.html" class="card">
+          <div class="card__icon card__icon--purple">⚙️</div>
+          <div class="card__title">Instalação & Setup</div>
+          <div class="card__desc">Passo a passo para instalação inicial: rede, mapeamento, estação de carga e dispositivos IoT.</div>
+          <div class="card__arrow">Ver documentação →</div>
+        </a>
+
+        <a href="maintenance.html" class="card">
+          <div class="card__icon card__icon--orange">🔧</div>
+          <div class="card__title">Manutenção & Cuidados</div>
+          <div class="card__desc">Inspeções periódicas, tabelas de manutenção, segurança e solução de problemas comuns.</div>
+          <div class="card__arrow">Ver documentação →</div>
+        </a>
+      </div>
+
+      <!-- Section: About iBEN -->
+      <h2>Sobre a iBEN Robot</h2>
+      <p>A <strong>Beijing Huiwen Technology (iBEN Robot)</strong> foi fundada em <strong>2016</strong> e é especializada em robôs industriais AMR (Autonomous Mobile Robot) de alta performance. Com mais de <strong>500 propriedades intelectuais</strong> e <strong>8.000+ unidades entregues</strong>, a iBEN atende mais de 1.000 clientes empresariais globalmente.</p>
+
+      <div class="specs">
+        <div class="spec">
+          <div class="spec__value">2016</div>
+          <div class="spec__label">Fundação</div>
+        </div>
+        <div class="spec">
+          <div class="spec__value">500+</div>
+          <div class="spec__label">Propriedade Intelectual</div>
+        </div>
+        <div class="spec">
+          <div class="spec__value">8.000+</div>
+          <div class="spec__label">Robôs Entregues</div>
+        </div>
+        <div class="spec">
+          <div class="spec__value">1.000+</div>
+          <div class="spec__label">Distribuidores</div>
+        </div>
+      </div>
+
+      <h3>Linha do Tempo</h3>
+      <div class="timeline">
+        <div class="timeline__item">
+          <strong>2017 — Robô Interativo</strong>
+          <p>Lançamento do primeiro robô de interação, alcançando a maior fatia de mercado na China.</p>
+        </div>
+        <div class="timeline__item">
+          <strong>2020 — Robô de Desinfecção</strong>
+          <p>Resposta rápida à pandemia com robôs de desinfecção automatizados.</p>
+        </div>
+        <div class="timeline__item">
+          <strong>2023 — Robô de Inventário</strong>
+          <p>Expansão para soluções de inventário e armazenamento.</p>
+        </div>
+        <div class="timeline__item">
+          <strong>2024 — AMR Industrial (X300B)</strong>
+          <p>Lançamento da linha AMR para transporte industrial autônomo.</p>
+        </div>
+        <div class="timeline__item">
+          <strong>2026 — Robô Humanoide Colaborativo</strong>
+          <p>Nova geração de robôs colaborativos humano-máquina.</p>
+        </div>
+      </div>
+
+      <h3>Cenários de Aplicação</h3>
+      <div class="cards">
+        <div class="card">
+          <div class="card__icon card__icon--blue">🏭</div>
+          <div class="card__title">Linha de Produção</div>
+          <div class="card__desc">Preparação de materiais e abastecimento automático de linhas de produção.</div>
+        </div>
+        <div class="card">
+          <div class="card__icon card__icon--green">🔄</div>
+          <div class="card__title">Transferência de Processo</div>
+          <div class="card__desc">Movimentação entre estações de trabalho — substituição de esteiras.</div>
+        </div>
+        <div class="card">
+          <div class="card__icon card__icon--purple">📦</div>
+          <div class="card__title">Entrada/Saída de Armazém</div>
+          <div class="card__desc">Transporte de materiais entre áreas de buffer e armazenamento.</div>
+        </div>
+        <div class="card">
+          <div class="card__icon card__icon--orange">🚚</div>
+          <div class="card__title">Multi-Estação</div>
+          <div class="card__desc">Entrega em múltiplos pontos com agendamento inteligente.</div>
+        </div>
+      </div>
+
+      <!-- Quick Reference -->
+      <h2>Referência Rápida</h2>
+
+      <div class="callout callout--info">
+        <div class="callout__icon">💡</div>
+        <div>
+          <strong>Senha padrão das configurações do robô</strong>
+          <p>A senha padrão para acessar as configurações do robô é <code>6666</code>.</p>
+        </div>
+      </div>
+
+      <div class="callout callout--warning">
+        <div class="callout__icon">⚠️</div>
+        <div>
+          <strong>Antes de qualquer manutenção</strong>
+          <p>Sempre desligue o robô antes de realizar manutenção. Isso evita movimentos inesperados causados por tarefas agendadas.</p>
+        </div>
+      </div>
+
+      <div class="callout callout--danger">
+        <div class="callout__icon">🚨</div>
+        <div>
+          <strong>Botão de Emergência</strong>
+          <p>Em caso de emergência, pressione imediatamente o botão de parada de emergência (no topo ou nas laterais do chassi). Gire no sentido horário para liberar.</p>
+        </div>
+      </div>
+
+      <h3>Contato e Suporte</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Canal</th><th>Informação</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Telefone</strong></td><td>(54) 3222-5746</td></tr>
+            <tr><td><strong>E-mail</strong></td><td>suporte@ganzerautomacao.com.br</td></tr>
+            <tr><td><strong>Website</strong></td><td><a href="https://www.iBENrobot.com" target="_blank">www.iBENrobot.com</a></td></tr>
+            <tr><td><strong>Sede</strong></td><td>No. 116, Huangchang Road, Chaoyang District, Beijing</td></tr>
+            <tr><td><strong>Shenzhen</strong></td><td>21F, Changjiang Center, Renmin Road, Longhua District</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ══ Footer ══ -->
+  <footer class="footer">
+    <span>© 2026 iBEN Robot — Beijing Huiwen Technology Co., Ltd.</span>
+    <span>Versão da documentação: 1.0 &nbsp;|&nbsp; <a href="https://www.iBENrobot.com" target="_blank">www.iBENrobot.com</a></span>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
