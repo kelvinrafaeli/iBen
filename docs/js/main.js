@@ -1,5 +1,5 @@
 // ═══════════════════════════════════════════════
-// iBEN Robot Documentation — Main JS
+// Robô X300B Documentation — Main JS
 // ═══════════════════════════════════════════════
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const pages = [
     { url: 'index.html', label: 'Início' },
     { url: 'robot-x300b.html', label: 'Robô X300B' },
-    { url: 'ims-platform.html', label: 'Plataforma iMS' },
+
     { url: 'maintenance.html', label: 'Manutenção' },
     { url: 'installation.html', label: 'Instalação' },
   ];
